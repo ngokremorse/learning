@@ -7,6 +7,8 @@ services:
     environment:
       - xpack.security.enabled=false
       - "discovery.type=single-node"
+      - "ELASTIC_PASSWORD=elasticsearch"
+      - "ELASTIC_USERNAME=elasticsearch"
     networks:
       - es
     ports:

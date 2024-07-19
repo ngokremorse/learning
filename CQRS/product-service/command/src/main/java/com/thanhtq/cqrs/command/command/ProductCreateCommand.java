@@ -1,15 +1,17 @@
-package com.thanhtq.cqrs.event;
+package com.thanhtq.cqrs.command.command;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
-@Getter
-@Setter
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class ProductCreatedEvent {
+public class ProductCreateCommand {
     private String productId;
     private String name;
     private Integer quantity;

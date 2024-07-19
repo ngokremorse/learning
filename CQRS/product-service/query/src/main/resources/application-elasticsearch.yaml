@@ -1,0 +1,12 @@
+spring:
+  data:
+    elasticsearch:
+      repositories:
+        enabled: true
+
+config:
+  elasticsearch:
+      uris: localhost:9200
+      username: elasticsearch
+      password: elasticsearch
+      searchContextAlive: 30M

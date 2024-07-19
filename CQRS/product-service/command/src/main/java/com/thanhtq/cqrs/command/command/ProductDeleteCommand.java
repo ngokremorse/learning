@@ -1,4 +1,4 @@
-package com.thanhtq.cqrs.command;
+package com.thanhtq.cqrs.command.command;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

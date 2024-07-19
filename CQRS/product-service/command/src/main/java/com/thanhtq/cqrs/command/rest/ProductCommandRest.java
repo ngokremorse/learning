@@ -1,9 +1,9 @@
-package com.thanhtq.cqrs.rest;
+package com.thanhtq.cqrs.command.rest;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.thanhtq.cqrs.command.ProductCreateCommand;
-import com.thanhtq.cqrs.aggregate.ProductAggregate;
-import com.thanhtq.cqrs.model.ProductModel;
+import com.thanhtq.cqrs.command.command.ProductCreateCommand;
+import com.thanhtq.cqrs.command.model.ProductModel;
+import com.thanhtq.cqrs.command.service.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,10 +17,11 @@ import java.util.UUID;
 @RequestMapping("/product/")
 public class ProductCommandRest {
 
-    private final ProductAggregate productAggregate;
+    private final ProductService productService;
 
     @PostMapping("/create")
     public String createProduct(@RequestBody ProductModel productModel) throws JsonProcessingException {
+
         ProductCreateCommand productCreateCommand = ProductCreateCommand
                 .builder()
                 .productId(UUID.randomUUID().toString())
@@ -28,7 +29,7 @@ public class ProductCommandRest {
                 .price(productModel.getPrice())
                 .quantity(productModel.getQuantity())
                 .build();
-        productAggregate.on(productCreateCommand);
+        productService.on(productCreateCommand);
         return productCreateCommand.getProductId();
     }
 

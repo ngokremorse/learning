@@ -1,13 +1,13 @@
-package com.thanhtq.cqrs;
+package com.thanhtq.cqrs.command;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProductQueryApp {
+public class ProductCommandApp {
 
     public static void main(String[] args) {
-        SpringApplication.run(ProductQueryApp.class, args);
+        SpringApplication.run(ProductCommandApp.class, args);
     }
 
 }

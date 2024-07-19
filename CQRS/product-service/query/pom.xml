@@ -25,6 +25,10 @@
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-elasticsearch</artifactId>
+        </dependency>
     </dependencies>
 
     <properties>
@@ -45,7 +49,7 @@
                         </exclude>
                     </excludes>
                     <skip>true</skip>
-                    <mainClass>com.thanhtq.cqrs.ProductQueryApp</mainClass>
+                    <mainClass>com.thanhtq.cqrs.query.ProductQueryApp</mainClass>
                 </configuration>
                 <executions>
                     <execution>

@@ -48,7 +48,7 @@
                         </exclude>
                     </excludes>
                     <skip>true</skip>
-                    <mainClass>com.thanhtq.cqrs.ProductCommandApp</mainClass>
+                    <mainClass>com.thanhtq.cqrs.command.ProductCommandApp</mainClass>
                 </configuration>
                 <executions>
                     <execution>

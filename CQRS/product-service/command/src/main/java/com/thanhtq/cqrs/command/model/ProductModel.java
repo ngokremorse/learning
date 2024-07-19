@@ -1,4 +1,4 @@
-package com.thanhtq.cqrs.model;
+package com.thanhtq.cqrs.command.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

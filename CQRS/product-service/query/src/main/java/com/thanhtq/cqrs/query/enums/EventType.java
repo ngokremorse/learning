@@ -1,4 +1,4 @@
-package com.thanhtq.cqrs.enums;
+package com.thanhtq.cqrs.query.enums;
 
 public enum EventType {
     CREATED,
